@@ -20,13 +20,16 @@ from django.views.generic.base import RedirectView
 from django.conf.urls.static import static
 from django.conf import settings
 
+from news.views import index
+
 urlpatterns = [
     path('', RedirectView.as_view(url='/dashboard'), name='home'),
     path('dashboard/', include('dashboard.urls')),
     path('grade/', include('grade.urls')),
     path('audio/', include('audio.urls')),
     path('transcribe/', include('transcribe.urls')),
-    path('admin/', admin.site.urls),   
+    path('admin/', admin.site.urls),
+    path('news/', index),  
 ]
 
 if settings.DEBUG:

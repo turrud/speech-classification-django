@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block css %}
+<!-- plugin css -->
+<link href="{% static 'libs/jquery-vectormap/jquery-jvectormap-1.2.2.css' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block content %}
+<!-- ============================================================== -->
+<!-- Start Page Content here -->
+<!-- ============================================================== -->
+
+<div class="content-page">
+    <div class="content">
+
+        <!-- Start Content-->
+        <div class="container-fluid">
+
+            {% include "base_page_title.html" %}
+            <!-- end row -->
+
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card" style="width: 18rem;">
+                                <img src="..." class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                <img src="..." class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+
+
+
+                            <div id="cardCollpase5" class="collapse pt-5 show">
+
+                            </div> <!-- collapsed end -->
+                        </div> <!-- end card-body -->
+                    </div> <!-- end card-->
+                </div> <!-- end col -->
+            </div>
+            <!-- end row -->
+
+        </div> <!-- container -->
+
+    </div> <!-- content -->
+
+    {% include "base_footer.html" %}
+
+</div>
+
+<!-- ============================================================== -->
+<!-- End Page content -->
+<!-- ============================================================== -->
+
+{% endblock %}
+
+{% block js %}
+
+<!-- Plugins js-->
+<script src="{% static 'libs/jquery-sparkline/jquery.sparkline.min.js' %}"></script>
+<script src="{% static 'libs/jquery-vectormap/jquery-jvectormap-1.2.2.min.js' %}"></script>
+<script src="{% static 'libs/jquery-vectormap/jquery-jvectormap-world-mill-en.js' %}"></script>
+
+<!-- Dashboard 2 init -->
+<script src="{% static 'js/pages/dashboard-2.init.js' %}"></script>
+
+{% endblock %}
